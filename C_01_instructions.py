@@ -23,15 +23,22 @@ def string_checker(question, valid_ans=("yes", "no")):
         print(error)
         print()
 
-# main routine goes here
+
+def instruction():
+    print('''
+    instructions:
+
+    ''')
 
 
-rps_list = ["rock", "paper", "scissors", "xxx"]
+# Main routine
+print()
+print("Rock Paper Scissors")
+print()
 
-want_instructions = string_checker("do you want to see the instructions? ")
+want_instructions = string_checker("Do you want to read the instructions? ")
 
+if want_instructions == "yes":
+    instruction()
 
-print("You chose:", want_instructions)
-
-user_choice = string_checker("choose: ", rps_list)
-print("You chose: ", user_choice)
+print("program continues")
